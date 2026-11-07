@@ -14,17 +14,20 @@
 # limitations under the License.
 #
 
-# FOD
+# FOD.
 TARGET_HAS_FOD := true
 
-# Inherit from device configuration
+# Inherit from device configuration.
 $(call inherit-product, device/samsung/a51/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff
+# Inherit some common Evolution X stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+TARGET_ENABLE_BLUR := false
+WITH_GMS := false
+# TARGET_USES_MINI_GAPPS := true
 
-## Device identifier. This must come after all inclusions
+# Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_a51
 PRODUCT_DEVICE := a51
 PRODUCT_BRAND := samsung
