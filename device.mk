@@ -22,6 +22,8 @@ $(call inherit-product, device/samsung/universal9611-common/common.mk)
 $(call inherit-product, vendor/samsung/a51/a51-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
+PRODUCT_PACKAGES += \
+    A51SettingsResTarget
 
 # Screen H/W
 TARGET_SCREEN_HEIGHT := 2400
