@@ -27,9 +27,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_a51
 PRODUCT_DEVICE := a51
-PRODUCT_BRAND := Samsung
+PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A515F
-PRODUCT_MANUFACTURER := Samsung
+PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_SHIPPING_API_LEVEL := 29
 
