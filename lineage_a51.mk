@@ -21,8 +21,16 @@ TARGET_HAS_FOD := true
 $(call inherit-product, device/samsung/a51/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff
+# Inherit some common Lunaris AOSP stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_ENABLE_BLUR := false
+TARGET_SUPPORTS_QUICK_TAP := false
+TARGET_FACE_UNLOCK_SUPPORTED := false
+TARGET_USE_WALLPAPERS := false
+TARGET_OPTIMIZED_DEXOPT := true
+SURFACE_FLINGER_BOOST := true
+WITH_BCR := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_a51
@@ -36,6 +44,10 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 # Build fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
 	BuildDesc="a51nsxx-user 13 TP1A.220624.014 A515FXXU5GVK6 release-keys" \
-	BuildFingerprint="samsung/a51nsxx/a51:13/TP1A.220624.014/A515FXXU5GVK6:user/release-keys"
+	BuildFingerprint="samsung/a51nsxx/a51:13/TP1A.220624.014/A515FXXU5GVK6:user/release-keys" \
+	DeviceName=a51 \
+    DeviceProduct=a51 \
+    SystemDevice=a51 \
+    SystemName=a51
 
 PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
