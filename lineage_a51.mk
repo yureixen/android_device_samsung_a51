@@ -24,8 +24,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common Evolution X stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_HAS_UDFPS := true
-TARGET_ENABLE_BLUR := false
-WITH_GMS := false
+TARGET_USES_MINI_GAPPS := true
+TARGET_SUPPORTS_QUICK_TAP := false
+
+# Signing keys.
+-include vendor/evolution-priv/keys/keys.mk
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_a51
@@ -33,6 +36,7 @@ PRODUCT_DEVICE := a51
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A515F
 PRODUCT_MANUFACTURER := samsung
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
 PRODUCT_SHIPPING_API_LEVEL := 29
 
@@ -40,5 +44,3 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 PRODUCT_BUILD_PROP_OVERRIDES += \
 	BuildDesc="a51nsxx-user 13 TP1A.220624.014 A515FXXU5GVK6 release-keys" \
 	BuildFingerprint="samsung/a51nsxx/a51:13/TP1A.220624.014/A515FXXU5GVK6:user/release-keys"
-
-PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
